@@ -38,7 +38,7 @@ export default class Form extends React.Component {
           </section>
 
           {/* json input */}
-          <section className="deck col-2">
+          <section className="deck">
             <div id="body">
               <textarea placeholder="Raw JSON Body" name="requestBody" />
             </div>

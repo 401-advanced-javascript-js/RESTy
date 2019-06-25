@@ -1,5 +1,7 @@
 import React from 'react';
 
+import('./response.scss');
+
 export default class Response extends React.Component {
   render() {
     return (
