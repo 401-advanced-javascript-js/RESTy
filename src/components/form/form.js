@@ -1,10 +1,11 @@
 import React from 'react';
 
+import('./form.scss');
 export default class Form extends React.Component {
   render() {
     return (
       <section>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <section>
             <input type="text" name="URL" placeholder="URL" />
             {/* crud buttons */}

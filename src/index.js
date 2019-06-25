@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './app';
 import * as serviceWorker from './serviceWorker';
 
+import('./reset.css');
+import('./base.css');
+
 class Main extends React.Component {
   render() {
     return <App />;
