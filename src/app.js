@@ -1,11 +1,18 @@
 import React from 'react';
+import Header from './components/header/header';
+import Form from './components/form/form';
+import Footer from './components/footer/footer';
+
+import('./app.scss');
 
 export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello, World!</p>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Form />
+      </main>
+      <Footer />
+    </>
   );
 }
