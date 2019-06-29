@@ -2,6 +2,7 @@
 import React from 'react';
 
 import('./form.scss');
+
 export default class Form extends React.Component {
   render() {
     return (
@@ -15,14 +16,17 @@ export default class Form extends React.Component {
                 <input type="radio" name="method" value="get" onChange={this.props.handleMethod} />
                 <span>GET</span>
               </label>
+              
               <label>
                 <input type="radio" name="method" value="post" onChange={this.props.handleMethod} />
                 <span>POST</span>
               </label>
+              
               <label>
                 <input type="radio" name="method" value="put" onChange={this.props.handleMethod} />
                 <span>PUT</span>
               </label>
+
               <label>
                 <input
                   type="radio"
@@ -32,6 +36,7 @@ export default class Form extends React.Component {
                 />
                 <span>PATCH</span>
               </label>
+              
               <label>
                 <input
                   type="radio"
