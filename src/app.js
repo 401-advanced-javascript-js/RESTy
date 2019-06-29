@@ -1,40 +1,39 @@
-import React from "react";
-import ReactJSON from "react-json-view";
-import superagent from "superagent";
+import React from 'react';
+import ReactJSON from 'react-json-view';
+import superagent from 'superagent';
 
-import Header from "./components/header/header";
-import Form from "./components/form/form";
-import Footer from "./components/footer/footer";
+import Header from './components/header/header';
+import Form from './components/form/form';
+import Footer from './components/footer/footer';
 
-import("./app.scss");
+import('./app.scss');
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      URL: "",
-      method: "",
+      URL: '',
+      method: '',
       response: {
         Headers: {},
-        Response: {}
-      }
+        Response: {},
+      },
     };
   }
 
-  handleURL = event => {
+  handleURL = (event) => {
     event.preventDefault();
     this.setState({ URL: event.target.value });
   };
 
-  handleMethod = event => {
+  handleMethod = (event) => {
     event.preventDefault();
     this.setState({ method: event.target.value });
   };
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const result = await superagent(this.state.method, this.state.URL);
-    // console.log(result.body.results);
     this.setState({ response: result });
   };
 
