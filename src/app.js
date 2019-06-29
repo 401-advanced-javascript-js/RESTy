@@ -22,10 +22,12 @@ export default class App extends React.Component {
   }
 
   handleURL = event => {
+    event.preventDefault();
     this.setState({ URL: event.target.value });
   };
 
   handleMethod = event => {
+    event.preventDefault();
     this.setState({ method: event.target.value });
   };
 
