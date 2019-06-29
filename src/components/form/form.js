@@ -1,33 +1,63 @@
-import React from 'react';
+import React from "react";
 
-import('./form.scss');
+import("./form.scss");
 export default class Form extends React.Component {
   render() {
     return (
-      <section>
-        <form onSubmit={this.handleSubmit}>
+      <>
+        <form onSubmit={this.props.handleSubmit}>
           <section>
-            <input type="text" name="URL" placeholder="URL" />
+            <input
+              type="text"
+              name="URL"
+              placeholder="URL"
+              onChange={this.props.handleURL}
+            />
             {/* crud buttons */}
             <div id="methods">
               <label>
-                <input type="radio" name="method" value="get" />
+                <input
+                  type="radio"
+                  name="method"
+                  value="get"
+                  onChange={this.props.handleMethod}
+                />
                 <span>GET</span>
               </label>
               <label>
-                <input type="radio" name="method" value="post" />
+                <input
+                  type="radio"
+                  name="method"
+                  value="post"
+                  onChange={this.props.handleMethod}
+                />
                 <span>POST</span>
               </label>
               <label>
-                <input type="radio" name="method" value="put" />
+                <input
+                  type="radio"
+                  name="method"
+                  value="put"
+                  onChange={this.props.handleMethod}
+                />
                 <span>PUT</span>
               </label>
               <label>
-                <input type="radio" name="method" value="patch" />
+                <input
+                  type="radio"
+                  name="method"
+                  value="patch"
+                  onChange={this.props.handleMethod}
+                />
                 <span>PATCH</span>
               </label>
               <label>
-                <input type="radio" name="method" value="delete" />
+                <input
+                  type="radio"
+                  name="method"
+                  value="delete"
+                  onChange={this.props.handleMethod}
+                />
                 <span>DELETE</span>
               </label>
 
@@ -44,7 +74,7 @@ export default class Form extends React.Component {
             </div>
           </section>
         </form>
-      </section>
+      </>
     );
   }
 }
